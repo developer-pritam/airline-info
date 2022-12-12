@@ -1,0 +1,10 @@
+const chatAPI = require("./chatapi");
+const wordmeaning = require("./wordmeaning");
+const imorovePara = require("./improvePara");
+const airlineCost = require("./airlineCost");
+const airbot = require("./airbot");
+exports.chatAPI = chatAPI.chatAPI;
+exports.airbot = airbot.airBotResp;
+exports.wordmeaning = wordmeaning.wordmeaning;
+exports.imorovePara = imorovePara.imorovePara;
+exports.airlineCost = airlineCost.airlineCost;
