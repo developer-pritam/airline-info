@@ -38,7 +38,7 @@ function sendMessage() {
   };
 
   fetch(
-    "http://localhost:5001/fir-project-82e95/us-central1/airbot",
+    "https://us-central1-fir-project-82e95.cloudfunctions.net/airbot",
     requestOptions
   )
     .then((response) => response.text())
