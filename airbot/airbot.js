@@ -3,7 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 const formidable = require("formidable-serverless");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "API_KEY",
 });
 const openai = new OpenAIApi(configuration);
 

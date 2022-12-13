@@ -52,7 +52,7 @@ form.addEventListener("submit", function (e) {
 });
 
 signup.addEventListener("click", () => {
-  window.location.replace("/signup.html");
+  window.location.replace("./signup.html");
 });
 
 window.onload = () => {

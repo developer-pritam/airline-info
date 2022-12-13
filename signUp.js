@@ -54,9 +54,8 @@ form.addEventListener("submit", function (e) {
 });
 
 loginBtn.addEventListener("click", () => {
-  window.location.replace("/login.html");
+  window.location.replace("./login.html");
 });
-
 
 window.onload = () => {
   var myHeaders = new Headers();
