@@ -10,7 +10,7 @@ const openai = new OpenAIApi(configuration);
 async function airelineFare(from, to) {
   const response = await openai.createCompletion({
     model: "text-davinci-002",
-    prompt: `Airline assistant that give fare between two airports:\n\nUser: ${from}-${to}
+    prompt: `Airline assistant that give fare between two airports and link of the website to book ticket:\n\nUser: ${from}-${to}
       Bot:`,
     temperature: 0.5,
     max_tokens: 120,

@@ -11,11 +11,11 @@ let longitude = document.querySelector("#longitude");
 let latitude = document.querySelector("#latitude");
 let logout = document.querySelector("#logout");
 let mic = document.querySelector("#mic");
-
+const bookNow = document.querySelector("#book-bow");
 let speak;
 const resultBox = document.querySelector("#resultBox");
 const container = document.querySelector("#container");
-
+let link;
 // var mydata = JSON.parse(country);
 addCountry();
 async function addCountry() {
@@ -91,13 +91,21 @@ check.addEventListener("click", () => {
     .then((response) => response.text())
     .then((result) => {
       console.log(result);
-      resultBox.innerHTML = result;
+      resultBox.innerHTML = result.split("LINK")[0];
       // speak(result);
+      link = result.split("LINK")[1];
     })
     .catch((error) => console.log("error", error));
 });
 mic.addEventListener("click", () => {
   speak(resultBox.innerHTML);
+});
+bookNow.addEventListener("click", () => {
+  if (link == undefined) {
+    alert("Please check the flight details first");
+    return;
+  }
+  window.open(link);
 });
 
 logout.addEventListener("click", () => {
