@@ -85,7 +85,8 @@ check.addEventListener("click", () => {
 
   resultBox.innerHTML = "Loading...";
   fetch(
-    "https://us-central1-fir-project-82e95.cloudfunctions.net/airlineCost",
+    // "https://us-central1-fir-project-82e95.cloudfunctions.net/airlineCost",
+    "http://127.0.0.1:5001/fir-project-82e95/us-central1/airlineCost",
     requestOptions
   )
     .then((response) => response.text())
